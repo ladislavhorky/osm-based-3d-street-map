@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>VTS Browser - Basic</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="//cdn.melown.com/libs/vtsjs/builtin/v2/browser/vts-browser.min.css" />
+    <script type="text/javascript" src="https://davidlevinsky.github.io/lada-libs/vts-browser.js"></script>
+</head>
+
+<body style = "padding: 0; margin: 0;">
+    <div id="map-div" style="width:100%; height:100%;">
+    </div>
+    <script>
+        (function startDemo() {
+
+            // create map in the html div with id 'map-div'
+            // parameter 'map' sets path to the map which will be displayed
+            var browser = vts.browser('map-div', {
+                map: 'http://altair.mlwn.se/store/map-config/benatky-parcels/mapConfig.json'
+            });
+
+        })();
+    </script>
+</body>
+</html>
