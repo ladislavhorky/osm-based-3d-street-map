@@ -1,4 +1,4 @@
-showLinesStyle = {
+highwaysStyle = {
 "layers" : {
     "lines" : {
         "line" : true,
