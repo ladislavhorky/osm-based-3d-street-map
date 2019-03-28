@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.melown.com/libs/vtsjs/builtin/v2/browser/vts-browser.min.css" />
     <script type="text/javascript" src="https://davidlevinsky.github.io/lada-libs/vts-browser.js"></script>
     <script type="text/javascript" src="./show-lines.js"></script>
-    <script type="text/javascript" src="./highways.js"></script>
+    <script type="text/javascript" src="./roads.js"></script>
 </head>
 
 <body style = "padding: 0; margin: 0;">
@@ -20,7 +20,7 @@
             // create map in the html div with id 'map-div'
             // parameter 'map' sets path to the map which will be displayed
             browser = vts.browser('map-div', {
-                map: 'http://altair.mlwn.se/store/map-config/osm-3d-street-map/mapConfig.json'
+                map: '//cdn.melown.com/vts/melown2015/presentations/osm-based-3d-street-map-of-earth/mapConfig.json'
             });
 
             //check whether browser is supported
@@ -38,7 +38,7 @@
             var view = browser.map.getView();
 
             view.freeLayers.osm = {
-                style : highwaysStyle
+                style : roadsStyle
             }
 
             browser.map.setView(view);
