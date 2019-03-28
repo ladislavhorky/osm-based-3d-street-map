@@ -9,15 +9,17 @@ roadsStyle = {
     "highways-base": {
       "filter": ["all",["==","#group","transportation"],["in","$class","motorway"]],
       "line": true,
-      "line-width": 4,
-      "line-color": [255,235,160,{"linear2":["#lod",[[7,80],[9,200],[12,200],[13,120]]]}],
+      "line-flat": true,
+      "line-width-units" : "ratio",
+      "line-width": 0.002,
+      "line-color": [255,235,160,{"linear2":["#lod",[[7,80],[9,200]]]}],
       "zbuffer-offset": [-0.02,0,0],
       "visible": {"discrete":[[6,false],[7,true],[12,true],[13,false]]}
     },
     "highways-outline": {
       "inherit": "highways-base",
-      "line-width": 5.5,
-      "line-color": [0,0,0,{"linear2":["#lod",[[8,100],[9,200],[12,200],[13,0]]]}],
+      "line-width": 0.0026,
+      "line-color": [0,0,0,{"linear2":["#lod",[[8,100],[9,200]]]}],
       "z-index": 1
     },
     "highways-detail-base": {
@@ -39,7 +41,9 @@ roadsStyle = {
     "main-roads": {
       "filter": ["all",["==","#group","transportation"],["in","$class","trunk","primary","secondary"]],
       "line": true,
-      "line-width": 2,
+      "line-flat": true,
+      "line-width-units" : "ratio",
+      "line-width": 0.0012,
       "line-color": [255,255,255,{"linear2":["#lod",[[10,80],[12,150]]]}],
       "zbuffer-offset": [-0.02,0,0],
       "visible": {"discrete":[[9,false],[10,true],[12,true],[13,false]]}
