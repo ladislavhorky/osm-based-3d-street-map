@@ -7,6 +7,7 @@
     <script type="text/javascript" src="./show-lines.js"></script>
     <script type="text/javascript" src="./roads.js"></script>
     <script type="text/javascript" src="./finetuned-roads-with-labels.js"></script>
+    <script type="text/javascript" src="./city-labels.js"></script>
 </head>
 
 <body style = "padding: 0; margin: 0;">
@@ -40,7 +41,7 @@
             var view = browser.map.getView();
 
             view.freeLayers.osm = {
-                style : fineRoadsStyle
+                style : cityLabels
             }
 
             browser.map.setView(view);
