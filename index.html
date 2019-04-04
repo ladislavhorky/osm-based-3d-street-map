@@ -44,6 +44,7 @@
         function onMapLoaded(){
             var view = browser.map.getView();
 
+            // override style of geodata with custom style
             view.freeLayers.osm = {
                 style : cityLabels
             }
