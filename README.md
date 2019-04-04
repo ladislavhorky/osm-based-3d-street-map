@@ -14,7 +14,7 @@ To play with various styling options for OSM-based data VTS offers, just:
   3. verify your github-pages are working by visiting `https://<your-username>.github.io/osm-based-3d-street-map`,
   4. edit the styles and see your changes online (see below).
   
-## How to play with the styles
+## How can I modify the styles?
 
 The `index.html` contains a simple web application built on top of [vts-browser-js](//github.com/melowntech/vts-browser-js).
 First it loads the style (in fact only the one you plan to use is needed), then it sets up the vts-browser-js using the map
@@ -25,7 +25,7 @@ To edit the style, simply edit the files in `style/` directory - see
 [styling reference](//github.com/melowntech/vts-browser-js/wiki/VTS-Geodata-Format#geo-layer-styles-structure)
 for available directives. Then make sure you picked the correct style in `index.html`.
 
-## How to set up my own map configuration
+## How do I set up my own map configuration?
 
 To set up your own map using VTS Public Resources, you will need latest Ubuntu LTS system.
 
@@ -85,3 +85,7 @@ To set up your own map using VTS Public Resources, you will need latest Ubuntu L
     "version": 1
   }
   ```
+  4. Go to `http://<your-server-name>:8070/store/map-config/osm-based-3d-street-map` to see the map.
+    
+When building the web app similar to the one in this repo, the `mapConfig.json` needed for it is served at `http://<your-server-name>:8070/store/map-config/osm-based-3d-street-map/mapConfig.json`
+  
