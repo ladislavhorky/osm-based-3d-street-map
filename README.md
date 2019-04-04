@@ -1,8 +1,9 @@
 # OSM-based 3D Street Map of Earth
 
 This is an accompanying repository for the eponymous talk held on FOSS4G NA 2019 in San Diego. 
-It is meant as a self-contained web where you can try styling OSM-based 3D street map and a tutorial describing how to 
-setup up the map using [vts-geospatial FOSS stack](https://www.melown.com/products/vts/) and VTS Public Resources.
+It is meant as a self-contained web where you can try styling OSM-based 3D street map. Furthermore, below is 
+a tutorial describing how to setup up the same map using your own instance of 
+[vts-geospatial FOSS stack](https://www.melown.com/products/vts/) and VTS Public Resources.
 
 ## What to do with this repo?
 
@@ -91,6 +92,7 @@ When building the web app similar to the one in this repo, the `mapConfig.json` 
 
 ## How do I add my own resources to the map?
 
-It is quite easy! We have a [suite of tutorials](http://vtsdocs.melown.com/en/latest/tutorials/index.html) 
-you may want to check out.
+That is quite easy with vts-geospatial! We have a [suite of tutorials]
+(http://vtsdocs.melown.com/en/latest/tutorials/index.html) just for this
+you might want to check out.
   
