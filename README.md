@@ -6,24 +6,24 @@ setup up the map using [vts-geospatial FOSS stack](https://www.melown.com/produc
 
 ## What to do with this repo?
 
-The repo contains [github-pages web with 3D OSM-based street map](//ladislavhorky.github.io/osm-based-3d-street-map).
+This repo contains [GitHub pages web with 3D OSM-based street map](//ladislavhorky.github.io/osm-based-3d-street-map).
 To play with various styling options for OSM-based data VTS offers, just: 
   1. fork the repo,
-  2. once forked, create one empty commit in your branch to force the github pages to build 
-  (e.g. click "edit" the README.md and commit), gihub-pages are ready once there is a green tick next to your commit.
-  3. verify your github-pages are working by visiting `https://<your-username>.github.io/osm-based-3d-street-map`,
+  2. once forked, create one commit in your branch to force the github pages to build. 
+  (e.g. click "edit" the README.md, add space and commit). GiHub pages are ready once a green tick appears next to your commit.
+  3. Verify your github-pages are working by visiting `https://<your-username>.github.io/osm-based-3d-street-map`,
   4. edit the styles and see your changes online (see below).
   
-## How can I modify the styles?
+## How can I modify the styling of vector streets?
 
-The `index.html` contains a simple web application built on top of [vts-browser-js](//github.com/melowntech/vts-browser-js).
-First it loads the style (in fact only the one you plan to use is needed), then it sets up the vts-browser-js using the map
-configuration containg terrain, imagery and OSM-based data from VTS Public Resources. 
-Then the map view is overriden so that your style is used instead the default style provided along the OSM-data.
+The [index.html](index.html) contains a simple web application built on top of [vts-browser-js](//github.com/melowntech/vts-browser-js).
+First, it [loads the style](index.html#L9) then it sets up the vts-browser-js using the map
+configuration containing terrain, imagery and OSM-based data from VTS Public Resources. 
+Then the map `view` is [overriden](index.html#L48) so that your style is used instead the default style provided along the OSM-data.
 
 To edit the style, simply edit the files in `style/` directory - see 
 [styling reference](//github.com/melowntech/vts-browser-js/wiki/VTS-Geodata-Format#geo-layer-styles-structure)
-for available directives. Then make sure you picked the correct style in `index.html`.
+for available directives or browse [Live JFFiddle examples](//github.com/melowntech/vts-browser-js/wiki/Examples#geodata---basic) dealing with geodata. Then make sure you picked the correct style in [index.html](index.html#L48).
 
 ## How do I set up my own map configuration?
 
@@ -88,4 +88,9 @@ To set up your own map using VTS Public Resources, you will need latest Ubuntu L
   4. Go to `http://<your-server-name>:8070/store/map-config/osm-based-3d-street-map` to see the map.
     
 When building the web app similar to the one in this repo, the `mapConfig.json` needed for it is served at `http://<your-server-name>:8070/store/map-config/osm-based-3d-street-map/mapConfig.json`
+
+## How do I add my own resources to the map?
+
+It is quite easy! We have a [suite of tutorials](http://vtsdocs.melown.com/en/latest/tutorials/index.html) 
+you may want to check out.
   
