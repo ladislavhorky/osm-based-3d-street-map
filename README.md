@@ -31,40 +31,57 @@ To set up your own map using VTS Public Resources, you will need latest Ubuntu L
 
   1. [Install VTS Backend](http://vtsdocs.melown.com/en/latest/tutorials/vtsbackend.html) from a Debian package.
   2. Add Viewfinder Panoramas 3 -based terrain from VTS Public Resources.
-  ```
+  ```bash
   $ suvts
   $ vts --add store/stage.melown2015/ \
         --tileset "//cdn.melown.com/vts/melown2015/terrain/global/viewfinder3/" \
         --bottom
   ```
-  3. Download `map-config/osm-based-3d-street-map` into /var/vts/store/map-config, make sure `vts` user can read this file.
+  3. Download `map-config/osm-based-3d-street-map` into `/var/vts/store/map-config/`, make sure `vts` user can read this file.
      Commented version of the file follows.
-  ```
+  ```bash
   {
-        "storage": "../stage.melown2015",
-        "tilesets": [
-                "terrain-viewfinder3"
-        ],
-        "boundLayers": {
-                "eox-sentinel2-cloudless": "https://cdn.melown.com/vts/melown2015/imagery/global/eox-it-sentinel2-cloudless/boundlayer.json"
-        },
-        "freeLayers": {
-                "osm-maptiler" : "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json"
-        },
-        "view": {
-                "description": "",
-                "surfaces": {
-                        "terrain-viewfinder3": [
-                                "eox-sentinel2-cloudless"
-                        ]
-                },
-                "freeLayers": {
-                        "osm-maptiler": {}
-                }
-        },
-        "position": [
-            "obj",-117.215534,32.707985,"fix",-111.55,0.00,-90.00,0.00,7488304.21,45.00
-        ],
-        "version": 1
+    # use the following VTS storage to pick a subset of surfaces
+    "storage": "../stage.melown2015",
+        
+    # pick up these surfaces (just the one we added in this case)
+    "tilesets": [ "terrain-viewfinder3"],
+        
+    # use following bound-layer(s) (imagery), it will be available under eox-sentinel2-cloudless name
+    # here we use Sentinel2-cloudless imagery crafted by EOX available as VTS Public Resource
+    "boundLayers": {
+      "eox-sentinel2-cloudless": 
+          "//cdn.melown.com/vts/melown2015/imagery/global/eox-it-sentinel2-cloudless/boundlayer.json"
+    },
+        
+    # use following free-layer(s) (vector geodata in this case)
+    # here we use OSM-based data based on MapTiler's MVT service, heightcoded by vts-mapproxy, 
+    # available as VTS Public Resource
+    "freeLayers": {
+      "osm-maptiler" : "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json"
+    },
+        
+    # select a combination of layers that will be visible when the client loads the map-configuration
+    "view": {
+      "description": "Default View",
+                
+      # we shall display viewfinder3 terrain and drape it over with 
+      # eox-sentinel2-cloudless imagery
+      "surfaces": {
+        "terrain-viewfinder3": [ "eox-sentinel2-cloudless" ]
+      },
+                
+      # display OSM-based data styled with default style
+      "freeLayers": {
+        "osm-maptiler": {}
+      }
+    },
+        
+    # default position to look at
+    "position": [
+      "obj",-117.215534,32.707985,"fix",-111.55,0.00,-90.00,0.00,7488304.21,45.00
+    ],
+        
+    "version": 1
   }
   ```
