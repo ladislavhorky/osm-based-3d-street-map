@@ -1,0 +1,32 @@
+{
+  "storage": "../stage.melown2015",
+
+  "tilesets": [ "terrain-viewfinder3"],
+
+  "boundLayers": {
+    "eox-sentinel2-cloudless":
+        "//cdn.melown.com/vts/melown2015/imagery/global/eox-it-sentinel2-cloudless/boundlayer.json"
+  },
+
+  "freeLayers": {
+    "osm-maptiler" : "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json"
+  },
+
+  "view": {
+    "description": "Default View",
+
+    "surfaces": {
+      "terrain-viewfinder3": [ "eox-sentinel2-cloudless" ]
+    },
+
+    "freeLayers": {
+      "osm-maptiler": {}
+    }
+  },
+
+  "position": [
+    "obj",-117.215534,32.707985,"fix",-111.55,0.00,-90.00,0.00,7488304.21,45.00
+  ],
+
+  "version": 1
+}
