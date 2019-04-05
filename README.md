@@ -92,7 +92,6 @@ When building the web app similar to the one in this repo, the `mapConfig.json` 
 
 ## How do I add my own resources to the map?
 
-That is quite easy with vts-geospatial! We have a [suite of tutorials]
-(http://vtsdocs.melown.com/en/latest/tutorials/index.html) just for this
+That is quite easy with vts-geospatial! We have a [suite of tutorials](http://vtsdocs.melown.com/en/latest/tutorials/index.html) just for this
 you might want to check out.
   
