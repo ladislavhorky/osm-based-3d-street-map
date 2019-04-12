@@ -6,7 +6,7 @@ roadsStyle = {
       "zbuffer-offset": [-0.02,0,0],
       "z-index": 10
     },
-    "highways-base": {
+    "motorways-base": {
       "filter": ["all",["==","#group","transportation"],["in","$class","motorway"]],
       "line": true,
       "line-flat": true,
@@ -16,13 +16,13 @@ roadsStyle = {
       "zbuffer-offset": [-0.02,0,0],
       "visible": {"discrete":[[6,false],[7,true],[12,true],[13,false]]}
     },
-    "highways-outline": {
-      "inherit": "highways-base",
+    "motorways-outline": {
+      "inherit": "motorways-base",
       "line-width": 0.0026,
       "line-color": [0,0,0,{"linear2":["#lod",[[8,100],[9,200]]]}],
       "z-index": 1
     },
-    "highways-detail-base": {
+    "motorways-detail-base": {
       "filter": ["all",["==","#group","transportation"],["in","$class","motorway"]],
       "line": true,
       "line-flat": true,
@@ -32,8 +32,8 @@ roadsStyle = {
       "visible": {"discrete":[[12,false],[13,true]]},
       "z-index": 2
     },
-    "highways-detail-outline": {
-      "inherit": "highways-detail-base",
+    "motorways-detail-outline": {
+      "inherit": "motorways-detail-base",
       "line-width": 20,
       "line-color": [255,220,88,{"linear2":["#lod",[[13,200],[16,80]]]}],
       "z-index": 3

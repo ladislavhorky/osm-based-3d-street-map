@@ -6,6 +6,7 @@
     <script type="text/javascript" src="https://davidlevinsky.github.io/lada-libs/vts-browser.js"></script>
     <!--script type="text/javascript" src="//cdn.melown.com/libs/vtsjs/builtin/v2/browser/vts-browser.min.js"></script-->
     <script type="text/javascript" src="//cdn.melown.com/libs/vtsjs/support/v2/start-browser.js"></script>
+    <script type="text/javascript" src="./style/final-style.js"></script>
     <script type="text/javascript" src="./show-lines.js"></script>
     <script type="text/javascript" src="./roads.js"></script>
     <script type="text/javascript" src="./finetuned-roads-with-labels.js"></script>
@@ -22,9 +23,12 @@
 
             var params = vtsParseUrlParams();
 
-            params['map'] = '//cdn.melown.com/vts/melown2015/presentations/osm-based-3d-street-map-of-earth/mapConfig.json';
+            //params['map'] = '//cdn.melown.com/vts/melown2015/presentations/osm-based-3d-street-map-of-earth/mapConfig.json';
+            params['map'] = '//altair.mlwn.se/store/map-config/osm-3d-street-map/mapConfig.json';
             params['jumpAllowed'] = true;
             params['positionInUrl'] = true;
+            params['mapFeaturesReduceMode'] = 'scr-count7';
+            params['mapFeaturesReduceParams'] = [ 0.05, 0.15, 11, 1, 1000 ];
 
             // create map in the html div with id 'map-div'
             // parameter 'map' sets path to the map which will be displayed
@@ -46,7 +50,7 @@
 
             // override style of geodata with custom style
             view.freeLayers.osm = {
-                style : cityLabels
+                style : finalStyle
             }
 
             browser.map.setView(view);
