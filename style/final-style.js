@@ -1,4 +1,4 @@
-cityLabels = {
+finalStyle = {
   "layers": {
     "roads-far-base": {
       "filter": ["skip"],
