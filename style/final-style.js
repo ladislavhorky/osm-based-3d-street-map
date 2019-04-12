@@ -75,15 +75,31 @@ finalStyle = {
       "zbuffer-offset": [-20,-50,-50],
       "visible": {"discrete":[[15,false],[16,true]]}
     },
-    "city-labels": {
-      "filter": ["all",["==","#group","place"],["in","$class","city", "town"]],
-      "visible": {"discrete":[[5,false],[6,true],[16,false]]},
+    "towns-labels": {
+      "filter": ["all",["==","#group","place"],["in","$class","city","town","village","hamlet"]],
+      "&town-population": {"str2num":{"if":[["has","$population"],"$population",1]}},
+      "&imp": {"logScale":["&town-population",24183000]},
+      "&rank": {"discrete2":["&imp",[[19.71,5],[19.72,4],[56.04,4],[56.06,3],[63.64,3],[63.66,2],[72.84,2],[72.86,1],[80.47,1],[80.49,0]]]},
+      "importance-source": "&imp",
+      "importance-weight": 1,
       "label": true,
-      "label-size": 19,
-      "zbuffer-offset": [-20,-50,-50],
-      "z-index": 4,
-      "culling": 85,
-      "visibility": {"linear2":[{"str2num":"$population"},[[2000,20000],[20000000,10000000]]]}
+      "label-color2": [0,0,0,192],
+      "label-color": [255,255,255,255],
+      "label-outline": [0.5,0.7,2.2,2.2],
+      "label-size": {"linear2":["&rank",[[0,25],[5,14]]]},
+      "label-offset": [0,0],
+      "label-no-overlap": true,
+      "zbuffer-offset": [-100,0,0],
+      "hysteresis": [1500,1500,"$name",true],
+      "culling": 85
+    },
+    "borders": {
+      "filter": ["all",["==","#group","boundary"],["in","$admin_level","2","4"],["!=","$maritime","1"]],
+      "line": true,
+      "line-flat": false,
+      "line-width": 4,
+      "line-color": [255,255,255,{"discrete2": ["$admin_level", [[2,128],[4,64]]]}],
+      "zbuffer-offset": [-0.01,0,0]
     }
   }
 }
