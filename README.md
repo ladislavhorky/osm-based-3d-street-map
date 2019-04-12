@@ -1,8 +1,8 @@
 # OSM-based 3D Street Map of Earth
 
 This is an accompanying repository for the eponymous talk held on FOSS4G NA 2019 in San Diego. 
-It is meant as a self-contained web where you can try styling OSM-based 3D street map. Furthermore, below is 
-a tutorial describing how to setup up the same map using your own instance of 
+It is meant as a self-contained website where you can try styling OSM-based 3D street map. Furthermore, below is
+a tutorial describing how to setup the same map using your own instance of
 [vts-geospatial FOSS stack](https://www.melown.com/products/vts/) and VTS Public Resources.
 
 ## What to do with this repo?
@@ -20,11 +20,11 @@ To play with various styling options for OSM-based data VTS offers, just:
 The [index.html](index.html) contains a simple web application built on top of [vts-browser-js](//github.com/melowntech/vts-browser-js).
 First, it [loads the style](index.html#L9) then it sets up the vts-browser-js using the map
 configuration containing terrain, imagery and OSM-based data from VTS Public Resources. 
-Then the map `view` is [overriden](index.html#L48) so that your style is used instead the default style provided along the OSM-data.
+Finally the map `view` is [overridden](index.html#L48) so that your style is used instead of the default style provided along the OSM-data.
 
 To edit the style, simply edit the files in `style/` directory - see 
 [styling reference](//github.com/melowntech/vts-browser-js/wiki/VTS-Geodata-Format#geo-layer-styles-structure)
-for available directives or browse [Live JFFiddle examples](//github.com/melowntech/vts-browser-js/wiki/Examples#geodata---basic) dealing with geodata. Then make sure you picked the correct style in [index.html](index.html#L48).
+for available directives or browse [Live JSFiddle examples](//github.com/melowntech/vts-browser-js/wiki/Examples#geodata---basic) dealing with geodata. Then make sure you picked the correct style in [index.html](index.html#L48).
 
 ## How do I set up my own map configuration?
 
