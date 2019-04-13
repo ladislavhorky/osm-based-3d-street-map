@@ -1,4 +1,4 @@
-showLinesStyle = {
+$01AllLines = {
 "layers" : {
     "lines" : {
         "line" : true,

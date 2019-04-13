@@ -1,4 +1,4 @@
-motorwaysStyle = {
+$02BasicFiltering = {
 "layers" : {
     "lines" : {
         "line" : true,

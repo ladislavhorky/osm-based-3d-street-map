@@ -3,14 +3,15 @@
     <title>OSM-based street map of Earth</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="//cdn.melown.com/libs/vtsjs/builtin/v2/browser/vts-browser.min.css" />
-    <!--script type="text/javascript" src="https://davidlevinsky.github.io/lada-libs/vts-browser.js"></script-->
     <script type="text/javascript" src="//cdn.melown.com/libs/vtsjs/builtin/v2/browser/vts-browser.min.js"></script>
     <script type="text/javascript" src="//cdn.melown.com/libs/vtsjs/support/v2/start-browser.js"></script>
-    <script type="text/javascript" src="./style/final-style.js"></script>
-    <script type="text/javascript" src="./show-lines.js"></script>
-    <script type="text/javascript" src="./roads.js"></script>
-    <script type="text/javascript" src="./finetuned-roads-with-labels.js"></script>
-    <script type="text/javascript" src="./city-labels.js"></script>
+    <script type="text/javascript" src="./style/01-all-lines.js"></script>
+    <script type="text/javascript" src="./style/02-basic-filtering-motorways.js"></script>
+    <script type="text/javascript" src="./style/03-outlines-zindex.js"></script>
+    <script type="text/javascript" src="./style/04-inheritance-fancy-motorways.js"></script>
+    <script type="text/javascript" src="./style/05-other-roads.js"></script>
+    <script type="text/javascript" src="./style/06-street-labels.js"></script>
+    <script type="text/javascript" src="./style/07-city-labels.js"></script>
 </head>
 
 <body style = "padding: 0; margin: 0;">
@@ -23,10 +24,15 @@
 
             var params = vtsParseUrlParams();
 
-            //params['map'] = '//cdn.melown.com/vts/melown2015/presentations/osm-based-3d-street-map-of-earth/mapConfig.json';
+            // URL of map configuration
             params['map'] = '//altair.mlwn.se/store/map-config/osm-3d-street-map/mapConfig.json';
+
+            // Allow double click to center to clicked point
             params['jumpAllowed'] = true;
+
             params['positionInUrl'] = true;
+
+            // parameters for handling importance of city labels
             params['mapFeaturesReduceMode'] = 'scr-count7';
             params['mapFeaturesReduceParams'] = [ 0.05, 0.15, 11, 1, 1000 ];
 
@@ -50,7 +56,7 @@
 
             // override style of geodata with custom style
             view.freeLayers.osm = {
-                style : finalStyle
+                style : $07CityLabels
             }
 
             browser.map.setView(view);
