@@ -83,15 +83,16 @@ finalStyle = {
       "importance-source": "&imp",
       "importance-weight": 1,
       "label": true,
-      "label-color2": [0,0,0,220],
-      "label-color": [255,238,172,255],
+      "label-color2": [0,0,0,200],
+      "label-color": [255,248,221,255],
       "label-outline": [0.5,0.7,2.2,2.2],
       "label-size": {"linear2":["&rank",[[0,25],[5,18]]]},
       "label-offset": [0,0],
       "label-no-overlap": true,
       "zbuffer-offset": [-100,0,0],
       "hysteresis": [1500,1500,"$name",true],
-      "culling": 85
+      "culling": 85,
+      "visible": {"discrete2": ["#lod", [[14, true],[15, false]]]}
     },
     "borders": {
       "filter": ["all",["==","#group","boundary"],["in","$admin_level","2","4"],["!=","$maritime","1"]],
