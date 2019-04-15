@@ -18,13 +18,13 @@ To play with various styling options for OSM-based data vts-geospatial offers, j
 ### How can I modify the styling of vector streets?
 
 The [index.html](index.html) contains a simple web application built on top of [vts-browser-js](//github.com/melowntech/vts-browser-js).
-First, it [loads the style](index.html#L9) then it sets up the vts-browser-js using the map
+First, it [loads the styles](index.html#L8) then it sets up the vts-browser-js using the map
 configuration containing terrain, imagery and OSM-based street data. 
 Finally the map `view` is [overridden](index.html#L48) so that your style is used instead of the default style provided along the OSM-data.
 
 To edit the style, simply edit the files in `style/` directory - see 
 [styling reference](//github.com/melowntech/vts-browser-js/wiki/VTS-Geodata-Format#geo-layer-styles-structure)
-for available directives or browse [Live JSFiddle examples](//github.com/melowntech/vts-browser-js/wiki/Examples#geodata---basic) dealing with geodata. Then make sure you picked the correct style in [index.html](index.html#L48).
+for available directives or browse [Live JSFiddle examples](//github.com/melowntech/vts-browser-js/wiki/Examples#geodata---basic) dealing with geodata. Then make sure you picked the correct style in [index.html](index.html#L55).
 
 Aternatively, press Ctrl+Shift+D when browsing the map, then press Shift+E to open style-editting window. Pick correct style from dropdown menu, edit it and click update. When you are happy with your style, do not forget to copy some file so you do not lose in after reload.
 
