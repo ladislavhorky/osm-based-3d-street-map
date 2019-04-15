@@ -8,7 +8,7 @@ a tutorial describing how to setup the same map using your own instance of
 ## What to do with this repo?
 
 This repo contains [GitHub pages web with 3D OSM-based street map](//ladislavhorky.github.io/osm-based-3d-street-map).
-To play with various styling options for OSM-based data VTS offers, just do the following: 
+To play with various styling options for OSM-based data vts-geospatial offers, just do the following: 
   1. fork the repo,
   2. once forked, create one commit in your branch to force the github pages to build. 
   (e.g. click "edit" the README.md, add space and commit). GiHub pages are ready once a green tick appears next to your commit.
