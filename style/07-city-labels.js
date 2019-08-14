@@ -74,9 +74,11 @@ $07CityLabels = {
     "road-labels": {
       "filter": ["all",["==","#group","transportation_name"],["in","$class","motorway","trunk","primary","secondary","tertiary","unclassified","minor","service","unclassified","residential","path"]],
       "line-label": true,
-      "line-label-size": {"linear2":["#lod",[[15,13],[21,1.3]]]},
+      "line-label-size": 20,
+      "line-label-type": "screen-flat",
+      "line-label-no-overlap-margin": 2,
       "zbuffer-offset": [-20,-50,-50],
-      "visible": {"discrete2": ["#lod",[[15,false],[16,true]]]}
+      "visible": {"discrete2":["#lod",[[15,false],[16,true]]]}
     },
 
     "towns-labels": {
